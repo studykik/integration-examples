@@ -2,8 +2,11 @@
 
 
 <script setup>
+import { createWidget } from '@typeform/embed'
+import '@typeform/embed/build/css/widget.css'
 import ThankYou from './ThankYou.vue'
 import SignupForm from './SignupForm.vue'
+
 defineProps({
     signupApi: {
         type: String,
@@ -20,25 +23,45 @@ defineProps({
 export default {
     data() {
         return {
-            isCompleted: false
+            step: 'signup'
         }
     },
     methods: {
-        onSignupCompleted() {
-            this.isCompleted = true
+        onSignupCompleted(patient) {
+            const { questionnaireFormId, uuid } = patient;
+            if (!questionnaireFormId) {
+                this.step = 'thank-you';
+                return;
+            }
+
+            this.step = 'form';
+
+            createWidget(questionnaireFormId, {
+                container: document.querySelector('#form'),
+                height: 520,
+                hidden: {
+                    patient_uuid: uuid
+                },
+                onSubmit: (() => {
+                    this.step = 'thank-you';
+                })
+            })
         }
-    }
+    },
 }
 </script>
 
 <template>
     <div class="widget-container">
-        <div v-if="isCompleted">
-            <ThankYou />
-        </div>
-        <div v-else>
+        <div v-show="step === 'signup'">
             <SignupForm @signup-completed="onSignupCompleted" :signupApi="signupApi"
                 :protocolLandingPageUuid="protocolLandingPageUuid" />
+        </div>
+        <div v-show="step === 'form'">
+            <div id="form"></div>
+        </div>
+        <div v-show="step === 'thank-you'">
+            <ThankYou />
         </div>
     </div>
 </template>

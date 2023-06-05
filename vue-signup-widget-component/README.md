@@ -1,6 +1,6 @@
 # studykik-signup-widget-vue-project
 
-Welcome to StudyKIK’s External Sign-Up widget. The purpose of this widget is to be embedded onto your web page for participants to sign up and be contacted by StudyKIK’s Call Center for prescreening. This will allow our agents to contact and pre-qualify your participants for your specific research study. 
+Welcome to StudyKIK’s External Sign-Up widget. The purpose of this widget is to be embedded onto your web page for participants to sign up, take a digital self-screener, and be contacted by StudyKIK’s Call Center for prescreening. This will allow our agents to contact and pre-qualify your participants for your specific research study.
 
 This widget has been built for Vue 3 projects, but will be expanding to other type of projects in the future. 
 

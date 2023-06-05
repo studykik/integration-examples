@@ -147,10 +147,10 @@ export default {
                     },
                     body: JSON.stringify(payload),
                 });
+                const responseData = await response.json();
                 if (response.ok) {
-                    this.$emit("signup-completed");
+                    this.$emit("signup-completed", responseData);
                 } else {
-                    const responseData = await response.json();
                     this.handleRequestError(responseData)
                 }
             } catch (error) {
