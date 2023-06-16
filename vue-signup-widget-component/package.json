@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@typeform/embed": "^2.10.0",
     "intl-tel-input": "^17.0.19",
     "vue": "^3.2.47"
   },
