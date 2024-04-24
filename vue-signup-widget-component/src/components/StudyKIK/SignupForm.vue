@@ -122,6 +122,7 @@ export default {
                 "patientPhoneAlreadyExists",
                 "invalidPostalCode",
                 "patientAlreadyExistsOnProtocolPage",
+                "patientAlreadyExistsOnProtocol"
             ];
 
             this.serverError =
