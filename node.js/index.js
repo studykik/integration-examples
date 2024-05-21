@@ -13,7 +13,7 @@ const data = JSON.stringify({
 
 	// Optional Signup parameters below
 	ethnicities: ['Asian'], //  Options Include - "American Indian or Alaska Native", "Black or African American", "Asian", "Hispanic or Latino", "Middle Eastern or North African", "Native Hawaiian or Other Pacific Islander", "White or Caucasian", "Prefer not to say"
-	gender: 'Cisgender Male', // Options Include - "Cisgender Male", "Cisgender Female", "Transgender Male", "Transgender Female", "Non Binary", "Prefer not to say"
+	gender: 'Male', // Options Include - "Male", "Female", "Transgender Male", "Transgender Female", "Non Binary", "Prefer not to say"
 	measurementSystem: 'metric', // Options Include - "imperial", "metric"
 	height: 155.5, // In centimeters if metric, inches if imperial
 	weight: 165.5, // In kilograms if metric, pounds if imperial
