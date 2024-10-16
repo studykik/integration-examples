@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>StudyKIK Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/24.5.0/build/js/intlTelInput.min.js" integrity="sha512-rk7qff5izQrFXD6ofd0/HaKg6FFGV7OnvWCNZNldZ3ZSLy7O9wDcCo64O97VYCtbC9IhA+K3GUjQBSXup3yTxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/24.5.0/build/js/intlTelInputWithUtils.min.js" integrity="sha512-eusJpvKlT+vOB7juxlBBoDH3lgcEDswpDLBwih3MSoQv5bJ7jxkMP4QUNI84QE0kR1SmwRKlPMddB6R9DrvhXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/24.5.0/build/css/intlTelInput.min.css"/>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="form-container">
+    <form>
+      <div class="title-container">
+        <h3 class="title">Enter your information to learn more!</h3>
+      </div>
+      <div class="server-error hidden">
+        <p class="message" id="serverError"></p>
+      </div>
+      <div class="input-container">
+        <label class="input-label" for="full-name">Full Name:</label>
+        <input
+          class="input-field"
+          id="fullName"
+        />
+        <p class="input-error hidden fullName-error">
+          Please enter your full name
+        </p>
+      </div>
+      <div class="input-container">
+        <label class="input-label" for="email">Email:</label>
+        <input
+          class="input-field"
+          id="email"
+        />
+        <p class="input-error hidden email-error">
+          Please make sure your email is the correct
+        </p>
+      </div>
+      <div class="input-container">
+        <label class="input-label" for="phone">Mobile Phone:</label>
+        <input
+          class="input-phone-field"
+          type="tel"
+          id="phone"
+          placeholder=""
+        />
+        <p class="input-error hidden phone-error">
+          Please make sure the phone no. has enough digits
+        </p>
+      </div>
+      <div class="input-container">
+        <label class="input-label" for="postal-code">Postal Code:</label>
+        <input
+          class="input-field"
+          id="postalCode"
+        />
+        <p class="input-error hidden postalCode-error">
+          Please enter a valid postal code
+        </p>
+      </div>
+
+      <button class="submit-button" type="submit">
+        Learn More
+        <div
+          id="sign-up-submit-spinner"
+          class="spinner-container hidden"
+        >
+          <img class="spinner-icon" src="./images/spinner.svg" />
+        </div>
+      </button>
+
+      <p class="terms-and-conditions">
+        By signing up you agree to receive text messages and emails about this
+        and similar studies near you. You can unsubscribe at any time. Text
+        messages and data rates may apply. Refer to
+        <a target="_blank" href="https://www.studykik.com//privacy-policy"
+          >Privacy Policy</a
+        >
+        and
+        <a target="_blank" href="https://www.studykik.com/terms-of-service"
+          >Terms of Service.</a
+        >
+      </p>
+
+      <div class="powered-by-container">
+        <p class="title">Powered by</p>
+        <img class="studykik-logo" src="./images/studykik-logo.svg" />
+      </div>
+    </form>
+  </div>
+  <div class="thank-you hidden">
+    <div class="title-container">
+      <h3 class="title">Thank you for your interest in this research study!</h3>
+    </div>
+    <p class="next-steps-title"> What Happens Next? </p>
+  
+    <div class="next-step-container">
+      <img class="next-step-icon" src="./images/next-step-icon.svg" />
+      <div>
+        <h3 class="title">Check your text messages.</h3>
+        <p class="text">You will receive a text message to schedule a good time to talk.</p>
+      </div>
+    </div>
+    <div class="next-step-container">
+      <img class="next-step-icon" src="./images/next-step-icon.svg" />
+      <div>
+        <h3 class="title">An expert will contact you.</h3>
+        <p class="text">A qualified specialist will see if you're a good match for the study.</p>
+      </div>
+    </div>
+    <div class="next-step-container">
+      <img class="next-step-icon" src="./images/next-step-icon.svg" />
+      <div>
+        <h3 class="title">We'll connect you with a specialist.</h3>
+        <p class="text">If you're a match, we will get you in touch with the closest doctor's office involved in this
+          study.</p>
+      </div>
+    </div>
+  </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
